@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme {
+  --color-yellow: #ffc107;
+  --color-white: #fff;
+  --color-orange: #fd7e14;
+  --color-gray-dark: #343a40;
+  --color-dark: #343a40;
+  --color-milkywhite: #f1f2f3;
+
+}
+
+.dance-font{
+  font-family: 'Dancing Script', cursive;
+}

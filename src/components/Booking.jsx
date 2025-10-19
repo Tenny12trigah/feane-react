@@ -35,7 +35,7 @@ export default function BookTable() {
               type="date"
               className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
             />
-
+                       
             <button
               type="submit"
               className=" bg-yellow-500 text-white p-3 pl-10 pr-10 rounded-full hover:bg-yellow-600 "

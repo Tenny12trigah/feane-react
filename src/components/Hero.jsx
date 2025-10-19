@@ -1,5 +1,6 @@
 import React from 'react';
 import { heroBg } from '../utils/image';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
 
@@ -19,10 +20,10 @@ export default function Hero() {
             <h1 className="text-2xl font-bold">Feane</h1>
 
           <div className="hidden md:flex space-x-8">
-            <button className="text-white">Home</button>
-            <button className="text-white">Menu</button>
-            <button className="text-white">About</button>
-            <button className="text-white">Book Table</button>
+            <Link to="/" className="text-white">Home</Link>
+            <Link to="/menu" className="text-white">Menu</Link>
+            <Link to="/about" className="text-white">About</Link>
+            <Link to="/booktable"  className="text-white">Book Table</Link>
           </div>
         </div>
       </div>

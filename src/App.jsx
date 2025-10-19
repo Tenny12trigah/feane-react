@@ -1,26 +1,30 @@
-import React from 'react';
-import Navbar from './components/Navbar'
-import Hero from './components/hero';
-import Promo from './components/Promo';
-import Menu from './components/Menu';
-import About from './components/About';
-import Booking from './components/Booking';
-import Clients from './components/Clients';
-import Footer from './components/Footer';
+import React from 'react'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import BookTable from './pages/BookTable'
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import About from './pages/About'
+import Mainlayout from './Layout/Mainlayout'
 
-function App() {
+const App = () => {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <> 
+        <Route path='/' element={<Mainlayout/>} >
+        <Route index element = {<Home/>} />
+        <Route path='/booktable' element = {<BookTable/>} />
+        <Route path='/menu' element = {<Menu/>} />
+        <Route path='/about' element = {<About/>} />
+        </Route>
+       </>
+    
+    )
+  )
   return (
-    <div className="App">
-      {/* <Navbar /> */}
-      <Hero />
-      <Promo/>
-      <Menu/>
-      <About/>
-      <Booking/>
-      <Clients/>
-      <Footer/>
-    </div>
-  );
+  <RouterProvider router={router}/>
+
+  )
 }
 
-export default App;
+export default App
